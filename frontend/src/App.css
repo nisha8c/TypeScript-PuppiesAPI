@@ -33,3 +33,20 @@
   object-fit: contain;
   transition: all 1s;
 }
+
+.footer {
+  width: 100%;
+  height:4vh;
+  display: flex;
+  justify-content: center;
+  background-color: #343434;
+  color: white;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:hover {
+  color: #E0DBF2;
+}
