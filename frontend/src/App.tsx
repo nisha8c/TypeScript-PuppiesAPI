@@ -45,11 +45,17 @@ function App() {
             console.log('PUP:  ', pup)
             return(
               <li className='pup-card' key={pup.id}>
-                <img src={pupImg} alt='abc'></img>
+                <div className='card-header'>
+                  <img src={pupImg} alt='abc' height='200' width='200'></img>
+                </div>
                 <h4>Name: {pup.name}</h4>
                 <div>ID: {pup.id}</div>
                 <div>Breed: {pup.breed}</div>
                 <div>Birth Date: {pup.birthdate}</div>
+                <div className='card-footer'>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </div>
               </li>
             );
           })

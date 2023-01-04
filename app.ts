@@ -18,9 +18,21 @@ const puppies: PuppyData[] = [
   {
       id: 2,
       breed: 'Puppy',
-      name: 'Puppy2',
+      name: 'Duck',
       birthdate: '2/02/1999',
   },
+  {
+    id: 3,
+    breed: 'PupPup',
+    name: 'Mario',
+    birthdate: '1/08/1999'
+},
+{
+    id: 4,
+    breed: 'PuppyPup',
+    name: 'Choco',
+    birthdate: '9/02/1999',
+},
 ];
 
 const getAllPuppiesInformation = (_req: Request, res: Response) => {
