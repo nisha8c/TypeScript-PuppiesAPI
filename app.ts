@@ -1,9 +1,12 @@
 import express from 'express';
+import cors from 'cors';
+
 import { Request, Response, Application } from 'express';
 import { PuppyData } from 'types';
 
 const app: Application = express();
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
 
 const puppies: PuppyData[] = [
   {
@@ -88,17 +91,23 @@ const addPuppy = (req: Request, res: Response) => {
     });
 };
 
-app.get('/api/puppies', getAllPuppiesInformation);  //works
-app.get('/api/puppies/:id', getPuppyById); // works
+app.get('/api/puppies', getAllPuppiesInformation); 
+app.get('/api/puppies/:id', getPuppyById);
 app.post('/api/puppies', addPuppy);
 app.put('/api/puppies/:id', updatePuppy);
-app.delete('/api/puppies/:id', deletePuppy); //works
+app.delete('/api/puppies/:id', deletePuppy); 
 
 app.get('/api/test', (_req: Request, res: Response) => {
   return res.status(200).json({ test: 'is working as it should' });
 });
 
 export default app;
+
+
+
+
+
+
 
 //CURL command
 /*
