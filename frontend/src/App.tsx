@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState, useEffect } from "react";
 import Puppies from './components/Puppies';
 import AddPuppy from './components/AddPuppy';
+import Footer from './components/Footer';
 import { PuppyData } from './types/types';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <h1>Welcome to Puppies API</h1><br></br>
       <AddPuppy />
       <Puppies data={puppy}/>
+      <Footer />
     </>
   );
 }
