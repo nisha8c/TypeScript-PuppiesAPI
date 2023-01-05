@@ -1,7 +1,18 @@
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <>
+      <header className='header'>
+        <nav className='navbar'>
+          <Link to="/puppies">All Puppies</Link>
+          <Link to="/add-puppy">Add Puppy</Link>
+          <Link to="/about">About</Link>
+        </nav>
+      </header>
+      
+    </>
   )
 }
 

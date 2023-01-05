@@ -1,5 +1,6 @@
 import { PuppyData } from '../types/types';
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 interface IPuppiesComponentProps {
   data: PuppyData[]
@@ -22,14 +23,33 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
   }, []);
 
   const deletePuppy = async (pupId: number) => {
+    
     console.log('deletePuppy id: ' , pupId); 
     await fetch("http://localhost:5000/api/puppies/"+ pupId, { method: "DELETE" })
-      .then(response => {  console.log(response.status); });
-      
+      .then(response => {  console.log(response.status); });  
+  };
+
+  const updatePuppy = async (pupId: number) => {
+
+    console.log('updatePuppy id: ', pupId);  
+    await fetch("http://localhost:5000/api/puppies/"+ pupId, { 
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        data
+      })
+    })
+     .then(response => response.json())
+     .then(data => { console.log(data) })
+     .catch(error => {
+        console.log(error);
+      });
   };
 
   return (
     <>
+      <Link to="/add-puppy">Add New Puppy</Link><br />
+      
       <h1>List of Puppies</h1>
       <ul className='cards'>
         {
@@ -45,8 +65,11 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
                 <div>Breed: {pup.breed}</div>
                 <div>Birth Date: {pup.birthdate.toString()}</div>
                 <div className='card-footer'>
-                    <button>Edit</button>
-                    <button onClick={() => deletePuppy(pup.id)}>Delete</button>
+                  <button onClick={() => updatePuppy(pup.id)}>Edit</button>
+                  <button>
+                    <Link to="/edit-puppy">Edit Puppy</Link><br />
+                  </button>
+                  <button onClick={() => deletePuppy(pup.id)}>Delete</button>
                 </div>
               </li>
             );

@@ -50,3 +50,12 @@
 .footer a:hover {
   color: #E0DBF2;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #343434;
+  color: white;
+}
