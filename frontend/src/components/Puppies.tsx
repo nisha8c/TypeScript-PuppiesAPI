@@ -29,6 +29,7 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
       .then(response => {  console.log(response.status); });  
   };
 
+  /*
   const updatePuppy = async (pupId: number) => {
 
     console.log('updatePuppy id: ', pupId);  
@@ -44,7 +45,7 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
      .catch(error => {
         console.log(error);
       });
-  };
+  }; */
 
   return (
     <>
@@ -61,18 +62,18 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
                   <img src={pupImg} alt='abc' height='200' width='200'></img>
                 </div>
 
-                <div className='card-body'></div>
-                <h4>Name: {pup.name}</h4>
-                <div>ID: {pup.id}</div>
-                <div>Breed: {pup.breed}</div>
-                <div>Birth Date: {pup.birthdate.toString()}</div>
-
+                <div className='card-body'>
+                  <h4>Name: {pup.name}</h4>
+                  <div>ID: {pup.id}</div>
+                  <div>Breed: {pup.breed}</div>
+                  <div>Birth Date: {pup.birthdate.toString()}</div>
+                </div>
+                
                 <div className='card-footer'>
-                  <button onClick={() => updatePuppy(pup.id)}>Edit</button>
-                  <button>
-                    <Link to="/edit-puppy">Edit Puppy</Link><br />
-                  </button>
-
+                  
+                  <div className='card-footer'>
+                    <Link to={`/puppies/${pup.id}`} className='view-pup'>Edit Info</Link>
+                  </div>
                   <button onClick={() => deletePuppy(pup.id)}>Delete</button>
                 </div>
 

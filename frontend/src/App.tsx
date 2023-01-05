@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route } from 'react-router-dom';
 
 import Puppies from './components/Puppies';
+import Puppy from './components/Puppy';
 import AddPuppy from './components/AddPuppy';
-import EditPuppy from './components/EditPuppy';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -35,8 +35,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/add-puppy" element={<AddPuppy />} />
-        <Route path="/edit-puppy" element={<EditPuppy />} />
         <Route path="/puppies" element={<Puppies data={puppy} />} />
+        <Route path='/puppies/:id' element={ <Puppy />} />
       </Routes> 
       <Footer />
     </>
