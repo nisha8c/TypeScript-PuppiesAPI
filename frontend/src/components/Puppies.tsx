@@ -21,6 +21,13 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
     
   }, []);
 
+  const deletePuppy = async (pupId: number) => {
+    console.log('deletePuppy id: ' , pupId); 
+    await fetch("http://localhost:5000/api/puppies/"+ pupId, { method: "DELETE" })
+      .then(response => {  console.log(response.status); });
+      
+  };
+
   return (
     <>
       <h1>List of Puppies</h1>
@@ -39,7 +46,7 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
                 <div>Birth Date: {pup.birthdate.toString()}</div>
                 <div className='card-footer'>
                     <button>Edit</button>
-                    <button>Delete</button>
+                    <button onClick={() => deletePuppy(pup.id)}>Delete</button>
                 </div>
               </li>
             );
