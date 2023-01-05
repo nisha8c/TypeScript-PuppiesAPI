@@ -8,6 +8,7 @@ import AddPuppy from './components/AddPuppy';
 import EditPuppy from './components/EditPuppy';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Home from './components/Home';
 import { PuppyData } from './types/types';
 import About from './components/About';
 
@@ -31,6 +32,7 @@ function App() {
     <>
       <Header />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/add-puppy" element={<AddPuppy />} />
         <Route path="/edit-puppy" element={<EditPuppy />} />

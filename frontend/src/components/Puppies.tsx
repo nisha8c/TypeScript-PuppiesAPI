@@ -60,17 +60,22 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
                 <div className='card-header'>
                   <img src={pupImg} alt='abc' height='200' width='200'></img>
                 </div>
+
+                <div className='card-body'></div>
                 <h4>Name: {pup.name}</h4>
                 <div>ID: {pup.id}</div>
                 <div>Breed: {pup.breed}</div>
                 <div>Birth Date: {pup.birthdate.toString()}</div>
+
                 <div className='card-footer'>
                   <button onClick={() => updatePuppy(pup.id)}>Edit</button>
                   <button>
                     <Link to="/edit-puppy">Edit Puppy</Link><br />
                   </button>
+
                   <button onClick={() => deletePuppy(pup.id)}>Delete</button>
                 </div>
+
               </li>
             );
           })
