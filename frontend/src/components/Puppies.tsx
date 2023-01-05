@@ -36,7 +36,7 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
                 <h4>Name: {pup.name}</h4>
                 <div>ID: {pup.id}</div>
                 <div>Breed: {pup.breed}</div>
-                <div>Birth Date: {pup.birthdate}</div>
+                <div>Birth Date: {pup.birthdate.toString()}</div>
                 <div className='card-footer'>
                     <button>Edit</button>
                     <button>Delete</button>

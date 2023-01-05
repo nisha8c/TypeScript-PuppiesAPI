@@ -13,25 +13,25 @@ const puppies: PuppyData[] = [
       id: 1,
       breed: 'Pup',
       name: 'Puppy1',
-      birthdate: '1/02/1999'
+      birthdate: new Date(2000, 2, 1)
   },
   {
       id: 2,
       breed: 'Puppy',
       name: 'Duck',
-      birthdate: '2/02/1999',
+      birthdate: new Date(2000, 3, 1),
   },
   {
     id: 3,
     breed: 'PupPup',
     name: 'Mario',
-    birthdate: '1/08/1999'
+    birthdate: new Date(2000, 1, 1)
 },
 {
     id: 4,
     breed: 'PuppyPup',
     name: 'Choco',
-    birthdate: '9/02/1999',
+    birthdate: new Date(2000, 4, 1),
 },
 ];
 
