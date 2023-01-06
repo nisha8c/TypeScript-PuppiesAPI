@@ -53,16 +53,17 @@ const getPuppyById = (_req: Request, res: Response) => {
 
 const updatePuppy = (req: Request, res: Response) => {
   const id = Number(req.params.id);
+  console.log('body :' + req.body);
   const puppy = puppies.find(p => p.id === id);
   if (puppy) {
+    console.log('in PUT call : ' + puppy);
     puppy.breed = req.body.breed;
     puppy.name = req.body.name;
     puppy.birthdate = req.body.birthdate;
+
     res
       .status(200)
-      .json({
-        message: 'Puppy with id '+ id +' Updated successfully'
-      });
+      .json(puppy);
   } else {
     res.status(404).json({
       message: 'Puppy with id '+ id +' not found'

@@ -29,24 +29,6 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
       .then(response => {  console.log(response.status); });  
   };
 
-  /*
-  const updatePuppy = async (pupId: number) => {
-
-    console.log('updatePuppy id: ', pupId);  
-    await fetch("http://localhost:5000/api/puppies/"+ pupId, { 
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        data
-      })
-    })
-     .then(response => response.json())
-     .then(data => { console.log(data) })
-     .catch(error => {
-        console.log(error);
-      });
-  }; */
-
   return (
     <>
       <Link to="/add-puppy">Add New Puppy</Link><br />
