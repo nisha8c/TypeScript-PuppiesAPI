@@ -1,5 +1,4 @@
 
-
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { PuppyData } from '../types/types';
@@ -25,35 +24,30 @@ const resolver: Resolver<FormValues> = async (values) => {
   };
 };
 
-
 const Puppy = () => {
   const { id } = useParams();
   const [data, setData] = useState<PuppyData>();
-
 
   useEffect(() => {
     const getData = async () => {
       const response = await fetch (`http://localhost:5000/api/puppies/${id}`);
       const pupData = await response.json();
-      console.log('pupData:   ... ');
       setData(pupData);
     };
 
     getData();
-    
-  }, [id]);
+  }, [id, data]);
 
   const {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<FormValues>({
+    } = useForm<FormValues>({
     resolver: resolver
   });
 
   const onSubmit = handleSubmit((updateData) => {
     alert(JSON.stringify(updateData));
-    console.log('On Submit:::::::::::::: ', JSON.stringify(updateData));
 
     fetch("http://localhost:5000/api/puppies/"+ id, { 
       method: "PUT",
@@ -66,8 +60,6 @@ const Puppy = () => {
         console.log(error);
       });
   });
-
-
   
   return (
     <>
