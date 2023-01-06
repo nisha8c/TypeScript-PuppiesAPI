@@ -70,7 +70,7 @@ const Puppy = () => {
           <h4>Update details in form below</h4>
         </div>
                  
-        <form onSubmit={onSubmit}>
+        <form className='form-conatiner' onSubmit={onSubmit}>
           <div>
             <label>Name</label>
             <input {...register("name")} placeholder={data?.name} autoFocus/>
@@ -87,7 +87,7 @@ const Puppy = () => {
             <input {...register("birthdate")} placeholder={data?.birthdate.toString()} />
           </div>
 
-          <input type="submit" />
+          <input className='btn' type="submit" />
         </form>       
         
       </section>

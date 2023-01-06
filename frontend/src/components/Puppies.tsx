@@ -31,7 +31,6 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
 
   return (
     <>
-      <Link to="/add-puppy">Add New Puppy</Link><br />
       
       <h1>List of Puppies</h1>
       <ul className='cards'>
@@ -41,7 +40,7 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
             return(
               <li className='pup-card' key={pup.id}>
                 <div className='card-header'>
-                  <img src={pupImg} alt='abc' height='200' width='200'></img>
+                  <img src={pupImg} alt='abc' height='250' width='250'></img>
                 </div>
 
                 <div className='card-body'>
@@ -56,7 +55,7 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
                   <div className='card-footer'>
                     <Link to={`/puppies/${pup.id}`} className='view-pup'>Edit Info</Link>
                   </div>
-                  <button onClick={() => deletePuppy(pup.id)}>Delete</button>
+                  <button className='btn' onClick={() => deletePuppy(pup.id)}>Delete</button>
                 </div>
 
               </li>

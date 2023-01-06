@@ -45,7 +45,7 @@ const AddPuppy = () => {
   return (
     <div className="add-puppy">
       <h1>Add New Puppy</h1>
-      <form onSubmit={onSubmit}>
+      <form className='form-conatiner' onSubmit={onSubmit}>
         <div>
           <label>Name</label>
           <input {...register("name")} placeholder="enter name" autoFocus/>
@@ -62,7 +62,7 @@ const AddPuppy = () => {
           <input {...register("birthdate")} placeholder="enter birthdate" />
         </div>
 
-        <input type="submit" />
+        <input className='btn' type="submit" />
       </form>
     </div>
   );
