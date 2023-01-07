@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import ScrollToTop from "react-scroll-to-top";
 
 import Puppies from './components/Puppies';
-import Puppy from './components/Puppy';
+import EditPuppy from './components/EditPuppy';
 import AddPuppy from './components/AddPuppy';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -38,7 +38,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/add-puppy" element={<AddPuppy />} />
         <Route path="/puppies" element={<Puppies data={puppy} />} />
-        <Route path='/puppies/:id' element={ <Puppy />} />
+        <Route path='/puppies/:id' element={ <EditPuppy />} />
       </Routes> 
       <Footer />
     </>

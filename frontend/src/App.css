@@ -122,10 +122,21 @@ body {
   border-radius: 4px;
 }
 
+.add-puppy, .edit-puppy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: #bab1ba;
+  padding: 10px 20px;
+}
+
 .form-conatiner {
   display: flex;
   flex-direction: column;
+  justify-content:center;
   margin-bottom: 15px;
+  border: black solid 1px;
+  padding: 10px 20px;
 }
 
 .carousel {
@@ -147,3 +158,17 @@ body {
   height: 100%;
   width: auto;
 }
+
+search-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.search {
+  width: 30%;
+}
+

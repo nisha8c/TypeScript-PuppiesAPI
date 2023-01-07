@@ -43,7 +43,7 @@ const AddPuppy = () => {
   });
 
   return (
-    <div className="add-puppy">
+    <section className="add-puppy">
       <h1>Add New Puppy</h1>
       <form className='form-conatiner' onSubmit={onSubmit}>
         <div>
@@ -64,7 +64,7 @@ const AddPuppy = () => {
 
         <input className='btn' type="submit" />
       </form>
-    </div>
+    </section>
   );
 }
 
