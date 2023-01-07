@@ -56,11 +56,11 @@ body {
 
 .footer {
   width: 100%;
-  height:4vh;
+  height: 8vh;
   display: flex;
   justify-content: center;
-  background-color: #343434;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .footer a {

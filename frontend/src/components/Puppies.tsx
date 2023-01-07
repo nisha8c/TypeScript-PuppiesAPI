@@ -40,7 +40,7 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
             return(
               <li className='pup-card' key={pup.id}>
                 <div className='card-header'>
-                  <img src={pupImg} alt='abc' height='250' width='250'></img>
+                  <img src={pupImg} alt='abc'></img>
                 </div>
 
                 <div className='card-body'>
