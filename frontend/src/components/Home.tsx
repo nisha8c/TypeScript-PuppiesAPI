@@ -9,26 +9,32 @@ import { Carousel } from 'react-responsive-carousel';
 const Home = () => {
   return (
     <>
-      <Carousel>
-        <div>
+      <Carousel className='carousel-container'
+        infiniteLoop autoPlay
+      >
+        <div className='image'>
             <img src={cutePuppyPic1} alt="cute-puppies" className='img-puppy'/>
             <p className="legend">Legend 1</p>
         </div>
-        <div>
+
+        <div className='image'>
         <img src={cutePuppyPic2} alt="cute-puppies" className='img-puppy'/>
             <p className="legend">Legend 2</p>
         </div>
-        <div>
+
+        <div className='image'>
         <img src={cutePuppyPic3} alt="cute-puppies" className='img-puppy'/>
             <p className="legend">Legend 3</p>
         </div>
-        <div>
+
+        <div className='image'>
         <img src={cutePuppyPic4} alt="cute-puppies" className='img-puppy'/>
-            <p className="legend">Legend 3</p>
+            <p className="legend">Legend 4</p>
         </div>
-        <div>
+
+        <div className='image'>
         <img src={cutePuppyPic5} alt="cute-puppies" className='img-puppy'/>
-            <p className="legend">Legend 3</p>
+            <p className="legend">Legend 5</p>
         </div>
         
     </Carousel>
