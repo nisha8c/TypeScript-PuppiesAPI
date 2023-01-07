@@ -2,6 +2,7 @@
 import './App.css';
 import { useState, useEffect } from "react";
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from "react-scroll-to-top";
 
 import Puppies from './components/Puppies';
 import Puppy from './components/Puppy';
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop smooth={true} width='25' height='25' top={15}/>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
