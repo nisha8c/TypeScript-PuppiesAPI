@@ -1,6 +1,6 @@
 # &lt;/salt&gt;
 
-# Server runs on port 5000
+# Few Details
 
 ## Server
 in root directory: 
@@ -10,6 +10,7 @@ npm run serve
 
 ## client
 cd frontend,
+npm i,
 npm start
 (Client is on port 3000)
 
