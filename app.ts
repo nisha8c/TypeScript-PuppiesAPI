@@ -25,13 +25,37 @@ const puppies: PuppyData[] = [
     id: 3,
     breed: 'PupPup',
     name: 'Mario',
-    birthdate: new Date(2000, 1, 1)
+    birthdate: new Date(2002, 11, 1)
 },
 {
     id: 4,
     breed: 'PuppyPup',
     name: 'Choco',
-    birthdate: new Date(2000, 4, 1),
+    birthdate: new Date(2013, 4, 10),
+},
+{
+  id: 5,
+  breed: 'Pup',
+  name: 'Puppy1',
+  birthdate: new Date(2014, 12, 1)
+},
+{
+  id: 6,
+  breed: 'Puppy',
+  name: 'Duck',
+  birthdate: new Date(2015, 9, 10),
+},
+{
+id: 7,
+breed: 'PupPup',
+name: 'Mario',
+birthdate: new Date(2016, 1, 11)
+},
+{
+id: 8,
+breed: 'PuppyPup',
+name: 'Choco',
+birthdate: new Date(2017, 4, 1),
 },
 ];
 

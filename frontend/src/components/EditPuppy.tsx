@@ -17,7 +17,17 @@ const resolver: Resolver<FormValues> = async (values) => {
       ? {
           name: {
             type: "required",
-            message: "This is required."
+            message: "Name is required."
+          },
+
+          breed: {
+            type: "required",
+            message: "Breed is required."
+          },
+
+          birthdate: {
+            type: "required",
+            message: "Birthdate is required."
           }
         }
       : {}
@@ -91,11 +101,13 @@ const Puppy = () => {
           <div>
             <label>Breed</label>
             <input {...register("breed")} placeholder={data?.breed} />
+            {errors?.breed && <p>{errors.breed.message}</p>}
           </div>
 
           <div>
             <label>Birth Date</label>
             <input {...register("birthdate")} placeholder={data?.birthdate.toString()} />
+            {errors?.birthdate && <p>{errors.birthdate.message}</p>}
           </div>
 
           <input className='btn' type="submit" />

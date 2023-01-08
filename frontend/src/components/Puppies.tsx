@@ -51,10 +51,7 @@ const Puppies = ({data}: IPuppiesComponentProps) => {
                 </div>
                 
                 <div className='card-footer'>
-                  
-                  <div className='card-footer'>
-                    <Link to={`/puppies/${pup.id}`} className='view-pup'>Edit Info</Link>
-                  </div>
+                  <Link to={`/puppies/${pup.id}`} className='view-pup'>Edit Info</Link>
                   <button className='btn' onClick={() => deletePuppy(pup.id)}>Delete</button>
                 </div>
 
