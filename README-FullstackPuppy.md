@@ -1,3 +1,56 @@
+# Server runs on port 5000
+
+## Server
+in root directory: 
+npm i
+npm run serve
+(Server is on port 5000)
+
+## client
+cd frontend
+npm start
+(Client is on port 3000)
+
+## GUI specs
+1. Go to top button
+2. carousel on home page
+
+## libs used
+react-hook-form
+react-social-icons
+react-responsive-carousel
+
+## Tech stack
+1. React JS
+2. Typescript
+3. Node JS
+4. Express
+5. REST API
+
+## External API
+https://dog.ceo/api/breeds/image/random
+
+## Database
+Array: puppies
+
+## User can:
+1. View puppies
+2. add new puppy
+3. edit existing puppy
+4. delete existing puppy
+5. If scrolled down a lot, can go to top easily.
+
+## Components
+1. About
+2. AddPuppy
+3. EditPuppy
+4. Footer
+5. Header
+6. Home
+7. Puppies
+
+
+
 # Salt React Fullstack - TypeScript Addon
 
 ## Task
