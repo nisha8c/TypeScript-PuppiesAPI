@@ -4,12 +4,12 @@
 
 ## Server
 in root directory: 
-npm i
+npm i,
 npm run serve
 (Server is on port 5000)
 
 ## client
-cd frontend
+cd frontend,
 npm start
 (Client is on port 3000)
 
