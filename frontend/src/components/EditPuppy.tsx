@@ -64,8 +64,19 @@ const Puppy = () => {
   return (
     <>
       <section className='edit-puppy'>
-        <h1>Edit Puppy Info</h1>
-        <div>ID: {data?.id}</div>
+        <h1>Edit Puppy Info for ID: {data?.id}</h1>
+
+        <section className='pup-card'>
+
+          <div className='card-body'>
+            <h4>Name: {data?.name}</h4>
+            <div>ID: {data?.id}</div>
+            <div>Breed: {data?.breed}</div>
+            <div>Birth Date: {data?.birthdate.toString()}</div>
+          </div>
+
+        </section>
+
         <div className='new-data'>
           <h4>Update details in form below</h4>
         </div>

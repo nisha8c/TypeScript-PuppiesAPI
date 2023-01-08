@@ -1,4 +1,6 @@
 import { useForm, Resolver } from 'react-hook-form';
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
 
 
 type FormValues = {

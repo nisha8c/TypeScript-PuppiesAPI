@@ -31,7 +31,7 @@ body {
   list-style: none;
 }
 
-.cards .pup-card {
+.cards .pup-card, .pup-card {
   width: 300px;
   height: auto;
   box-shadow: 0 0 5px gray;
@@ -51,8 +51,8 @@ body {
 }
 
 .cards .pup-card .card-header img {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 90%;
   object-fit: contain;
   transition: all 1s;
 }
@@ -60,12 +60,11 @@ body {
 .cards .pup-card .card-footer a {
   background-color: white;
   border: 1px solid black;
-  padding: 10px 20px;
+  padding: 5px 5px;
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
-
 
 .footer {
   width: 100%;
@@ -157,19 +156,6 @@ body {
   margin: 0 auto;
   height: 100%;
   width: auto;
-}
-
-search-container {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  align-items: center;
-  flex-direction: column;
-  row-gap: 20px;
-}
-
-.search {
-  width: 30%;
 }
 
 .about-container {
